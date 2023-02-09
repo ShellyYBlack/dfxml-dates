@@ -4,7 +4,7 @@ from operator import attrgetter
 
 
 with open("dfxml.xml", encoding="utf8") as fp:
-    soup = BeautifulSoup(fp)
+    soup = BeautifulSoup(fp, features="xml")
 
 fileobjects = soup.find_all('fileobject')
 with open ('dfxml-dates.csv', 'w', newline='', encoding="utf8") as csvfile:
